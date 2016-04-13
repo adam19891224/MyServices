@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataConfig>
+	<!--
+		solr与数据库连接的配置，这里主要是配置需要操作数据库的sql 连接属性等，除此之外，还要在当前目录下的solrconfig.xml中，指定数据库支持
+		详情见solrconfig.xml
+	-->
+    <dataSource type="JdbcDataSource"
+				  driver="com.mysql.jdbc.Driver"
+				  url="jdbc:mysql://192.168.46.8:3306/yjf_easylife_stest"
+				  user="easyTest"
+				  password="easyTest"/>  <!--这个配置不用多介绍，连接mysql的数据源-->
+				  
+	<document name="productInfo"><!--solr中，一个document表示一个文档-->
+		<entity name="unified_wholesale_product" pk="productId"
+			  query="select unified_wholesale_product_id as productId, product_category_one_code as categoryCode, unified_product_code as productCode, product_category_one_name as categoryName, product_name as productName, product_category_four_name as productMessage, raw_update_time as rawAddTime from unified_wholesale_product"
+			  deltaImportQuery="select unified_wholesale_product_id as productId, product_category_one_code as categoryCode, unified_product_code as productCode, product_category_one_name as categoryName, product_name as productName, product_category_four_name as productMessage, raw_update_time as rawAddTime from unified_wholesale_product where unified_wholesale_product_id = '${dataimporter.delta.id}'" 
+			  deltaQuery="select unified_wholesale_product_id as productId from unified_wholesale_product where raw_update_time > '${dataimporter.last_index_time}'"  
+			  deletedPkQuery="select unified_wholesale_product_id as productId from unified_wholesale_product where is_delete = 1">  
+		<!--
+			上面的entity作为数据库来说，就是一张表的描述 name是数据库中的表名，这里我们导入的是unified_wholesale_product表
+			pk 即主键Id 由于solr中，定义域是在sechma中的，所以这里要和sechma中的字段一一对应，我们在sechma中的主键是ProductID, 所以这里也要这么命名
+			query表示要导入索引库中的sql查询语句 但是我们知道，既然采用搜索引擎，那么必然是数据量大，like无法支持情况下，所以这里我们直接查询，肯定会很慢，这里插入两个solr中支持的参数，来分批次进行导入
+			deltaImportQuery 表示根据主键id插叙出单个记录插入到索引库
+			deltaQuery 获取增量数据的id集合，即第一次导入之后，后面插入索引库的数据就没必要全部重新插了，而是获取最后一次插入时间之后新增的数据即可，所以先通过这个sql获取哪些数据是新增的，得到它们的主键，然后调用上一步的语句，根据这个id去一条一条的插入到索引中，特别注意的是 raw_add_time必须要在sechma中配置
+			deletedPkQuery 获取需要从索引库中删除的记录的id，而判断条件就是is_delete是true， 当然，前提是你的表中有这个字段
+		-->
+		
+		<!--
+			然后这个filed就很熟悉了，数据库中对应的字段 
+			column是数据库中的字段，但是由于上面我们的sql中使用了别名，这里就用别名表示
+			name就是solr中的字段，即sechma中配置的字段
+		-->
+			<field column="productId" name="productId" />  
+			<field column="categoryCode" name="categoryCode" /> 
+			<field column="productCode" name="productCode" /> 
+			<field column="categoryName" name="categoryName" /> 
+			<field column="productName" name="productName" /> 
+			<field column="productMessage" name="productMessage" />
+			<field column="rawAddTime" name="rawAddTime" />
+		</entity>
+		<!--
+			然后我们就可以通过访问浏览器或者进入solr的首页来进行数据库和solr索引库的同步
+			http://localhost:8080/solr1/test/dataimport?command=full-import solr1是项目名，test是索引库名，dataimport是我们在solrconfig.xml中配置的同步数据时访问的请求
+			后面的command是参数，表示访问形式，除了full-import 即全库插入，还有增量插入delta-import等，详情可查看solr的维基：
+			http://wiki.apache.org/solr/DataImportHandler
+		-->
+	</document> 
+</dataConfig>
