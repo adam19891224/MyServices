@@ -6,16 +6,16 @@
 	-->
     <dataSource type="JdbcDataSource"
 				  driver="com.mysql.jdbc.Driver"
-				  url="jdbc:mysql://192.168.46.8:3306/yjf_easylife_stest"
-				  user="easyTest"
-				  password="easyTest"/>  <!--这个配置不用多介绍，连接mysql的数据源-->
+				  url="jdbc:mysql://127.0.0.1:3306/webserver"
+				  user="root"
+				  password="123456"/>  <!--这个配置不用多介绍，连接mysql的数据源-->
 				  
-	<document name="productInfo"><!--solr中，一个document表示一个文档-->
-		<entity name="unified_wholesale_product" pk="productId"
-			  query="select unified_wholesale_product_id as productId, product_category_one_code as categoryCode, unified_product_code as productCode, product_category_one_name as categoryName, product_name as productName, product_category_four_name as productMessage, raw_update_time as rawAddTime from unified_wholesale_product"
-			  deltaImportQuery="select unified_wholesale_product_id as productId, product_category_one_code as categoryCode, unified_product_code as productCode, product_category_one_name as categoryName, product_name as productName, product_category_four_name as productMessage, raw_update_time as rawAddTime from unified_wholesale_product where unified_wholesale_product_id = '${dataimporter.delta.id}'" 
-			  deltaQuery="select unified_wholesale_product_id as productId from unified_wholesale_product where raw_update_time > '${dataimporter.last_index_time}'"  
-			  deletedPkQuery="select unified_wholesale_product_id as productId from unified_wholesale_product where is_delete = 1">  
+	<document name="article"><!--solr中，一个document表示一个文档-->
+		<entity name="tb_article" pk="ARTICLE_SID"
+			  query="SELECT ARTICLE_SID, ARTICLE_ID, ARTICLE_TITLE, ARTICLE_IMG, ARTICLE_DESCRIPTION, CREATE_DATE, UPDATE_DATE FROM tb_article"
+			  deltaImportQuery="SELECT ARTICLE_SID, ARTICLE_ID, ARTICLE_TITLE, ARTICLE_IMG, ARTICLE_DESCRIPTION, CREATE_DATE, UPDATE_DATE FROM tb_article WHERE ARTICLE_SID = '${dataimporter.delta.id}'" 
+			  deltaQuery="SELECT ARTICLE_SID FROM tb_article WHERE CREATE_DATE > '${dataimporter.last_index_time}'"  
+			  deletedPkQuery="SELECT ARTICLE_SID FROM tb_article WHERE is_delete = 1">  
 		<!--
 			上面的entity作为数据库来说，就是一张表的描述 name是数据库中的表名，这里我们导入的是unified_wholesale_product表
 			pk 即主键Id 由于solr中，定义域是在sechma中的，所以这里要和sechma中的字段一一对应，我们在sechma中的主键是ProductID, 所以这里也要这么命名
@@ -30,13 +30,13 @@
 			column是数据库中的字段，但是由于上面我们的sql中使用了别名，这里就用别名表示
 			name就是solr中的字段，即sechma中配置的字段
 		-->
-			<field column="productId" name="productId" />  
-			<field column="categoryCode" name="categoryCode" /> 
-			<field column="productCode" name="productCode" /> 
-			<field column="categoryName" name="categoryName" /> 
-			<field column="productName" name="productName" /> 
-			<field column="productMessage" name="productMessage" />
-			<field column="rawAddTime" name="rawAddTime" />
+			<field column="ARTICLE_SID" name="articleSid" />  
+			<field column="ARTICLE_ID" name="articleId" /> 
+			<field column="ARTICLE_TITLE" name="articleTitle" /> 
+			<field column="ARTICLE_IMG" name="articleImg" /> 
+			<field column="ARTICLE_DESCRIPTION" name="articleDescription" />
+			<field column="CREATE_DATE" name="createDate" />
+			<field column="UPDATE_DATE" name="updateDate" />
 		</entity>
 		<!--
 			然后我们就可以通过访问浏览器或者进入solr的首页来进行数据库和solr索引库的同步

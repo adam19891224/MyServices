@@ -20,11 +20,20 @@
 		特别注意第三个productName 我们指定的是自己定义的text_ik，即表示按照这个类型来存储productName, 而这个类型下面我们会介绍，是按照Ik分词器来进行分词存储
 	-->
 
+	<field name="articleSid" type="int" indexed="true" stored="true" required="true" multiValued="false" />
+	<field name="articleId" type="string" indexed="true" stored="true"/>
+	<field name="articleTitle" type="text_ik" indexed="true" stored="true"/>
+	<field name="articleImg" type="string" indexed="true" stored="true"/>
+	<field name="articleDescription" type="text_ik" indexed="true" stored="true"/>
+	<field name="createDate" type="date" indexed="true" stored="true"/>
+	<field name="updateDate" type="date" indexed="true" stored="true"/>
+	
+	
 	<!--
 		指定这个文档中的主键
 		<uniqueKey>productId</uniqueKey>
 	-->
-	
+	<uniqueKey>articleSid</uniqueKey>
 	
 	<!--
 		动态字段，即solr也允许对schema中用户没有定义的字段进行索引，例如下面的*_i，使用了通配符*, 那么它的意思就很明确了，假设此时我们从代码中存入了一个域为title_i
@@ -141,30 +150,7 @@
         <filter class="solr.PorterStemFilterFactory"/>
       </analyzer>
     </fieldType>
-    <fieldType name="text_en_splitting" class="solr.TextField" positionIncrementGap="100" autoGeneratePhraseQueries="true">
-      <analyzer type="index">
-        <filter class="solr.StopFilterFactory"
-                ignoreCase="true"
-                words="lang/stopwords_en.txt"
-                />
-        <filter class="solr.WordDelimiterFilterFactory" generateWordParts="1" generateNumberParts="1" catenateWords="1" catenateNumbers="1" catenateAll="0" splitOnCaseChange="1"/>
-        <filter class="solr.LowerCaseFilterFactory"/>
-        <filter class="solr.KeywordMarkerFilterFactory" protected="protwords.txt"/>
-        <filter class="solr.PorterStemFilterFactory"/>
-      </analyzer>
-      <analyzer type="query">
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
-        <filter class="solr.SynonymFilterFactory" synonyms="synonyms.txt" ignoreCase="true" expand="true"/>
-        <filter class="solr.StopFilterFactory"
-                ignoreCase="true"
-                words="lang/stopwords_en.txt"
-                />
-        <filter class="solr.WordDelimiterFilterFactory" generateWordParts="1" generateNumberParts="1" catenateWords="0" catenateNumbers="0" catenateAll="0" splitOnCaseChange="1"/>
-        <filter class="solr.LowerCaseFilterFactory"/>
-        <filter class="solr.KeywordMarkerFilterFactory" protected="protwords.txt"/>
-        <filter class="solr.PorterStemFilterFactory"/>
-      </analyzer>
-    </fieldType>
+    
     <fieldType name="text_en_splitting_tight" class="solr.TextField" positionIncrementGap="100" autoGeneratePhraseQueries="true">
       <analyzer>
         <tokenizer class="solr.WhitespaceTokenizerFactory"/>
