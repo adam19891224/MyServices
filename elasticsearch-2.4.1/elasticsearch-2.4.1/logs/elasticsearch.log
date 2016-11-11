@@ -1,0 +1,18 @@
+[2016-10-09 09:18:25,001][INFO ][node                     ] [Lynx] version[2.4.1], pid[1140], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-10-09 09:18:25,001][INFO ][node                     ] [Lynx] initializing ...
+[2016-10-09 09:18:25,596][INFO ][plugins                  ] [Lynx] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-10-09 09:18:25,627][INFO ][env                      ] [Lynx] using [1] data paths, mounts [[(D:)]], net usable_space [121.6gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-10-09 09:18:25,627][INFO ][env                      ] [Lynx] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-10-09 09:18:27,671][INFO ][node                     ] [Lynx] initialized
+[2016-10-09 09:18:27,671][INFO ][node                     ] [Lynx] starting ...
+[2016-10-09 09:18:27,983][INFO ][transport                ] [Lynx] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-10-09 09:18:27,998][INFO ][discovery                ] [Lynx] elasticsearch/MD05hhu_QvuWSy1SzIrv9A
+[2016-10-09 09:18:32,077][INFO ][cluster.service          ] [Lynx] new_master {Lynx}{MD05hhu_QvuWSy1SzIrv9A}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-09 09:18:32,155][INFO ][gateway                  ] [Lynx] recovered [0] indices into cluster_state
+[2016-10-09 09:18:32,280][INFO ][http                     ] [Lynx] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-10-09 09:18:32,280][INFO ][node                     ] [Lynx] started
+[2016-10-09 09:21:16,660][INFO ][bootstrap                ] running graceful exit on windows
+[2016-10-09 09:21:16,660][INFO ][node                     ] [Lynx] stopping ...
+[2016-10-09 09:21:16,706][INFO ][node                     ] [Lynx] stopped
+[2016-10-09 09:21:16,706][INFO ][node                     ] [Lynx] closing ...
+[2016-10-09 09:21:16,706][INFO ][node                     ] [Lynx] closed

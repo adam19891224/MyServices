@@ -1,0 +1,183 @@
+[2016-11-07 08:50:44,755][INFO ][node                     ] [adam-node] version[2.4.1], pid[5112], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-11-07 08:50:44,759][INFO ][node                     ] [adam-node] initializing ...
+[2016-11-07 08:50:45,280][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2016-11-07 08:50:45,305][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [120.5gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-11-07 08:50:45,306][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-11-07 08:50:47,786][INFO ][node                     ] [adam-node] initialized
+[2016-11-07 08:50:47,786][INFO ][node                     ] [adam-node] starting ...
+[2016-11-07 08:50:47,979][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-11-07 08:50:48,009][INFO ][discovery                ] [adam-node] enjoy-article/lb9r99JdTIOwhI-hiVGPsQ
+[2016-11-07 08:50:52,070][INFO ][cluster.service          ] [adam-node] new_master {adam-node}{lb9r99JdTIOwhI-hiVGPsQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-11-07 08:50:52,118][INFO ][http                     ] [adam-node] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2016-11-07 08:50:52,119][INFO ][node                     ] [adam-node] started
+[2016-11-07 08:50:52,313][INFO ][gateway                  ] [adam-node] recovered [1] indices into cluster_state
+[2016-11-07 08:50:53,567][INFO ][cluster.routing.allocation] [adam-node] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[test][4]] ...]).
+[2016-11-07 09:09:48,817][INFO ][cluster.metadata         ] [adam-node] [test] update_mapping [member]
+[2016-11-07 09:10:15,845][DEBUG][action.index             ] [adam-node] failed to execute [index {[test][member][999], source[{"name": "小雅", "age": "26", "_id": "333"}]}] on [[test][1]]
+MapperParsingException[Cannot generate dynamic mappings of type [_id] for [_id]]
+	at org.elasticsearch.index.mapper.DocumentParser.createBuilderFromFieldType(DocumentParser.java:506)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDynamicValue(DocumentParser.java:616)
+	at org.elasticsearch.index.mapper.DocumentParser.parseValue(DocumentParser.java:444)
+	at org.elasticsearch.index.mapper.DocumentParser.parseObject(DocumentParser.java:264)
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:124)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:309)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:580)
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:559)
+	at org.elasticsearch.action.index.TransportIndexAction.prepareIndexOperationOnPrimary(TransportIndexAction.java:211)
+	at org.elasticsearch.action.index.TransportIndexAction.executeIndexRequestOnPrimary(TransportIndexAction.java:223)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:157)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:66)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryPhase.doRun(TransportReplicationAction.java:657)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:287)
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:279)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-11-07 14:56:23,646][DEBUG][action.search            ] [adam-node] [test][2], node[lb9r99JdTIOwhI-hiVGPsQ], [P], v[10], s[STARTED], a[id=8aCzwXdDRmuEOJcPJdC7eg]: Failed to execute [org.elasticsearch.action.search.SearchRequest@45b0a83b] lastShard [true]
+RemoteTransportException[[adam-node][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"filstered": {"filter": {"range": {"age": {"gt": 20}}}, "query": {"match": {"name": "姓名"}}}}}]]; nested: QueryParsingException[No query registered for [filstered]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"filstered": {"filter": {"range": {"age": {"gt": 20}}}, "query": {"match": {"name": "姓名"}}}}}]]; nested: QueryParsingException[No query registered for [filstered]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:873)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:667)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [test] QueryParsingException[No query registered for [filstered]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:248)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:856)
+	... 12 more
+[2016-11-07 14:56:23,647][DEBUG][action.search            ] [adam-node] [test][1], node[lb9r99JdTIOwhI-hiVGPsQ], [P], v[10], s[STARTED], a[id=SAcbTVDETIC4rhI1lUtcqA]: Failed to execute [org.elasticsearch.action.search.SearchRequest@45b0a83b] lastShard [true]
+RemoteTransportException[[adam-node][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"filstered": {"filter": {"range": {"age": {"gt": 20}}}, "query": {"match": {"name": "姓名"}}}}}]]; nested: QueryParsingException[No query registered for [filstered]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"filstered": {"filter": {"range": {"age": {"gt": 20}}}, "query": {"match": {"name": "姓名"}}}}}]]; nested: QueryParsingException[No query registered for [filstered]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:873)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:667)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [test] QueryParsingException[No query registered for [filstered]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:248)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:856)
+	... 12 more
+[2016-11-07 14:56:23,647][DEBUG][action.search            ] [adam-node] [test][0], node[lb9r99JdTIOwhI-hiVGPsQ], [P], v[10], s[STARTED], a[id=armzqLy9RG6oedcTNolx6w]: Failed to execute [org.elasticsearch.action.search.SearchRequest@45b0a83b]
+RemoteTransportException[[adam-node][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"filstered": {"filter": {"range": {"age": {"gt": 20}}}, "query": {"match": {"name": "姓名"}}}}}]]; nested: QueryParsingException[No query registered for [filstered]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"filstered": {"filter": {"range": {"age": {"gt": 20}}}, "query": {"match": {"name": "姓名"}}}}}]]; nested: QueryParsingException[No query registered for [filstered]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:873)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:667)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [test] QueryParsingException[No query registered for [filstered]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:248)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:856)
+	... 12 more
+[2016-11-07 14:56:23,664][DEBUG][action.search            ] [adam-node] All shards failed for phase: [query]
+RemoteTransportException[[adam-node][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"filstered": {"filter": {"range": {"age": {"gt": 20}}}, "query": {"match": {"name": "姓名"}}}}}]]; nested: QueryParsingException[No query registered for [filstered]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"filstered": {"filter": {"range": {"age": {"gt": 20}}}, "query": {"match": {"name": "姓名"}}}}}]]; nested: QueryParsingException[No query registered for [filstered]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:873)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:667)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [test] QueryParsingException[No query registered for [filstered]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:248)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:856)
+	... 12 more
+[2016-11-07 14:56:23,646][DEBUG][action.search            ] [adam-node] [test][3], node[lb9r99JdTIOwhI-hiVGPsQ], [P], v[10], s[STARTED], a[id=G2_DjQ7XTsKrIqp4ppfg6g]: Failed to execute [org.elasticsearch.action.search.SearchRequest@45b0a83b] lastShard [true]
+RemoteTransportException[[adam-node][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"filstered": {"filter": {"range": {"age": {"gt": 20}}}, "query": {"match": {"name": "姓名"}}}}}]]; nested: QueryParsingException[No query registered for [filstered]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"filstered": {"filter": {"range": {"age": {"gt": 20}}}, "query": {"match": {"name": "姓名"}}}}}]]; nested: QueryParsingException[No query registered for [filstered]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:873)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:667)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [test] QueryParsingException[No query registered for [filstered]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:248)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:856)
+	... 12 more
+[2016-11-07 14:56:23,646][DEBUG][action.search            ] [adam-node] [test][4], node[lb9r99JdTIOwhI-hiVGPsQ], [P], v[10], s[STARTED], a[id=8VkHjiFmQSieBBMEo4J9Qw]: Failed to execute [org.elasticsearch.action.search.SearchRequest@45b0a83b] lastShard [true]
+RemoteTransportException[[adam-node][127.0.0.1:9300][indices:data/read/search[phase/query]]]; nested: SearchParseException[failed to parse search source [{"query": {"filstered": {"filter": {"range": {"age": {"gt": 20}}}, "query": {"match": {"name": "姓名"}}}}}]]; nested: QueryParsingException[No query registered for [filstered]];
+Caused by: SearchParseException[failed to parse search source [{"query": {"filstered": {"filter": {"range": {"age": {"gt": 20}}}, "query": {"match": {"name": "姓名"}}}}}]]; nested: QueryParsingException[No query registered for [filstered]];
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:873)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:667)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:633)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:377)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:368)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$SearchQueryTransportHandler.messageReceived(SearchServiceTransportAction.java:365)
+	at org.elasticsearch.transport.TransportRequestHandler.messageReceived(TransportRequestHandler.java:33)
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:77)
+	at org.elasticsearch.transport.TransportService$4.doRun(TransportService.java:376)
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: [test] QueryParsingException[No query registered for [filstered]]
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:248)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:320)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:223)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:218)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:856)
+	... 12 more

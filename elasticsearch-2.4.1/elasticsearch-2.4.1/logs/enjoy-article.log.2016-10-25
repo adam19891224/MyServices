@@ -1,0 +1,216 @@
+[2016-10-25 08:27:50,914][INFO ][node                     ] [adam-node] version[2.4.1], pid[5428], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-10-25 08:27:50,914][INFO ][node                     ] [adam-node] initializing ...
+[2016-10-25 08:27:51,866][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [license, marvel-agent], sites []
+[2016-10-25 08:27:51,913][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [120.9gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-10-25 08:27:51,913][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-10-25 08:27:55,157][INFO ][node                     ] [adam-node] initialized
+[2016-10-25 08:27:55,157][INFO ][node                     ] [adam-node] starting ...
+[2016-10-25 08:27:55,501][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-10-25 08:27:55,532][INFO ][discovery                ] [adam-node] enjoy-article/P5jTOp9uRoWJX491KU6Slw
+[2016-10-25 08:27:59,630][INFO ][cluster.service          ] [adam-node] new_master {adam-node}{P5jTOp9uRoWJX491KU6Slw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-25 08:27:59,948][INFO ][license.plugin.core      ] [adam-node] license [a9ea907c-5fd1-4a62-8fcd-92ccb710b33a] - valid
+[2016-10-25 08:27:59,948][ERROR][license.plugin.core      ] [adam-node] 
+#
+# License will expire on [Tuesday, November 08, 2016]. If you have a new license, please update it.
+# Otherwise, please reach out to your support contact.
+# 
+# Commercial plugins operate with reduced functionality on license expiration:
+# - marvel
+#  - The agent will stop collecting cluster and indices metrics
+#  - The agent will stop automatically cleaning indices older than [marvel.history.duration]
+[2016-10-25 08:28:00,058][INFO ][http                     ] [adam-node] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-10-25 08:28:00,058][INFO ][node                     ] [adam-node] started
+[2016-10-25 08:28:00,214][INFO ][gateway                  ] [adam-node] recovered [3] indices into cluster_state
+[2016-10-25 08:28:01,237][INFO ][cluster.routing.allocation] [adam-node] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.kibana][0], [.kibana][0], [.marvel-es-1-2016.10.09][0], [.marvel-es-1-2016.10.09][0]] ...]).
+[2016-10-25 08:28:05,376][INFO ][cluster.metadata         ] [adam-node] [.marvel-es-1-2016.10.25] creating index, cause [auto(bulk api)], templates [.marvel-es-1], shards [1]/[1], mappings [_default_, node, shards, index_stats, index_recovery, cluster_state, cluster_stats, node_stats, indices_stats]
+[2016-10-25 08:28:05,953][INFO ][cluster.routing.allocation] [adam-node] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.marvel-es-1-2016.10.25][0]] ...]).
+[2016-10-25 08:28:06,140][INFO ][cluster.metadata         ] [adam-node] [.marvel-es-1-2016.10.25] update_mapping [node_stats]
+[2016-10-25 08:28:06,234][INFO ][cluster.metadata         ] [adam-node] [.marvel-es-1-2016.10.25] update_mapping [indices_stats]
+[2016-10-25 08:28:06,308][INFO ][cluster.metadata         ] [adam-node] [.marvel-es-1-2016.10.25] update_mapping [cluster_stats]
+[2016-10-25 08:34:59,557][INFO ][bootstrap                ] running graceful exit on windows
+[2016-10-25 08:34:59,558][INFO ][node                     ] [adam-node] stopping ...
+[2016-10-25 08:34:59,682][DEBUG][action.admin.cluster.node.stats] [adam-node] failed to execute on node [P5jTOp9uRoWJX491KU6Slw]
+SendRequestTransportException[[adam-node][127.0.0.1:9300][cluster:monitor/nodes/stats[n]]]; nested: TransportException[TransportService is closed stopped can't send request];
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:340)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.start(TransportNodesAction.java:165)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.access$100(TransportNodesAction.java:107)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:77)
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:46)
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:137)
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:85)
+	at org.elasticsearch.cluster.InternalClusterInfoService.updateNodeStats(InternalClusterInfoService.java:289)
+	at org.elasticsearch.cluster.InternalClusterInfoService.refresh(InternalClusterInfoService.java:325)
+	at org.elasticsearch.cluster.InternalClusterInfoService.maybeRefresh(InternalClusterInfoService.java:310)
+	at org.elasticsearch.cluster.InternalClusterInfoService.access$600(InternalClusterInfoService.java:69)
+	at org.elasticsearch.cluster.InternalClusterInfoService$SubmitReschedulingClusterInfoUpdatedJob$1.run(InternalClusterInfoService.java:255)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: TransportException[TransportService is closed stopped can't send request]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:320)
+	... 14 more
+[2016-10-25 08:34:59,682][DEBUG][action.admin.indices.stats] [adam-node] failed to execute [indices:monitor/stats] on node [P5jTOp9uRoWJX491KU6Slw]
+SendRequestTransportException[[adam-node][127.0.0.1:9300][indices:monitor/stats[n]]]; nested: TransportException[TransportService is closed stopped can't send request];
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:340)
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:299)
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction$AsyncAction.sendNodeRequest(TransportBroadcastByNodeAction.java:327)
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction$AsyncAction.start(TransportBroadcastByNodeAction.java:315)
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction.doExecute(TransportBroadcastByNodeAction.java:238)
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction.doExecute(TransportBroadcastByNodeAction.java:79)
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:137)
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:85)
+	at org.elasticsearch.cluster.InternalClusterInfoService.updateIndicesStats(InternalClusterInfoService.java:303)
+	at org.elasticsearch.cluster.InternalClusterInfoService.refresh(InternalClusterInfoService.java:354)
+	at org.elasticsearch.cluster.InternalClusterInfoService.maybeRefresh(InternalClusterInfoService.java:310)
+	at org.elasticsearch.cluster.InternalClusterInfoService.access$600(InternalClusterInfoService.java:69)
+	at org.elasticsearch.cluster.InternalClusterInfoService$SubmitReschedulingClusterInfoUpdatedJob$1.run(InternalClusterInfoService.java:255)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: TransportException[TransportService is closed stopped can't send request]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:320)
+	... 15 more
+[2016-10-25 08:34:59,921][INFO ][node                     ] [adam-node] stopped
+[2016-10-25 08:34:59,922][INFO ][node                     ] [adam-node] closing ...
+[2016-10-25 08:34:59,925][INFO ][node                     ] [adam-node] closed
+[2016-10-25 08:35:27,130][INFO ][node                     ] [adam-node] version[2.4.1], pid[5360], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-10-25 08:35:27,131][INFO ][node                     ] [adam-node] initializing ...
+[2016-10-25 08:35:27,524][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-10-25 08:35:27,543][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [120.9gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-10-25 08:35:27,543][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-10-25 08:35:29,220][INFO ][node                     ] [adam-node] initialized
+[2016-10-25 08:35:29,220][INFO ][node                     ] [adam-node] starting ...
+[2016-10-25 08:35:29,465][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-10-25 08:35:29,468][INFO ][discovery                ] [adam-node] enjoy-article/WXX27rTFTFa3mb2LlYtgmA
+[2016-10-25 08:35:33,523][INFO ][cluster.service          ] [adam-node] new_master {adam-node}{WXX27rTFTFa3mb2LlYtgmA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-25 08:35:33,742][INFO ][http                     ] [adam-node] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-10-25 08:35:33,742][INFO ][node                     ] [adam-node] started
+[2016-10-25 08:35:33,761][INFO ][gateway                  ] [adam-node] recovered [0] indices into cluster_state
+[2016-10-25 08:41:31,086][INFO ][bootstrap                ] running graceful exit on windows
+[2016-10-25 08:41:31,086][INFO ][node                     ] [adam-node] stopping ...
+[2016-10-25 08:41:31,126][INFO ][node                     ] [adam-node] stopped
+[2016-10-25 08:41:31,126][INFO ][node                     ] [adam-node] closing ...
+[2016-10-25 08:41:31,126][INFO ][node                     ] [adam-node] closed
+[2016-10-25 08:46:57,167][INFO ][node                     ] [adam-node] version[2.4.1], pid[6560], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-10-25 08:46:57,168][INFO ][node                     ] [adam-node] initializing ...
+[2016-10-25 08:46:57,645][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2016-10-25 08:46:57,671][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [120.9gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-10-25 08:46:57,675][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-10-25 08:46:59,495][INFO ][node                     ] [adam-node] initialized
+[2016-10-25 08:46:59,495][INFO ][node                     ] [adam-node] starting ...
+[2016-10-25 08:46:59,803][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-10-25 08:46:59,806][INFO ][discovery                ] [adam-node] enjoy-article/Yqv-iqfJSdqnVo1bhFBtNQ
+[2016-10-25 08:47:03,883][INFO ][cluster.service          ] [adam-node] new_master {adam-node}{Yqv-iqfJSdqnVo1bhFBtNQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-25 08:47:03,951][INFO ][gateway                  ] [adam-node] recovered [0] indices into cluster_state
+[2016-10-25 08:47:04,121][INFO ][http                     ] [adam-node] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-10-25 08:47:04,122][INFO ][node                     ] [adam-node] started
+[2016-10-25 10:23:45,473][INFO ][bootstrap                ] running graceful exit on windows
+[2016-10-25 10:23:45,474][INFO ][node                     ] [adam-node] stopping ...
+[2016-10-25 10:23:45,567][INFO ][node                     ] [adam-node] stopped
+[2016-10-25 10:23:45,569][INFO ][node                     ] [adam-node] closing ...
+[2016-10-25 10:23:45,584][INFO ][node                     ] [adam-node] closed
+[2016-10-25 10:24:12,988][INFO ][node                     ] [adam-node] version[2.4.1], pid[8832], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-10-25 10:24:12,992][INFO ][node                     ] [adam-node] initializing ...
+[2016-10-25 10:24:13,593][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2016-10-25 10:24:13,626][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [120.3gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-10-25 10:24:13,626][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-10-25 10:24:16,750][INFO ][node                     ] [adam-node] initialized
+[2016-10-25 10:24:16,751][INFO ][node                     ] [adam-node] starting ...
+[2016-10-25 10:24:17,076][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-10-25 10:24:17,091][INFO ][discovery                ] [adam-node] enjoy-article/TSx4l75lS4OALJHEjFYA1Q
+[2016-10-25 10:24:21,159][INFO ][cluster.service          ] [adam-node] new_master {adam-node}{TSx4l75lS4OALJHEjFYA1Q}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-25 10:24:21,230][INFO ][gateway                  ] [adam-node] recovered [0] indices into cluster_state
+[2016-10-25 10:24:21,444][INFO ][http                     ] [adam-node] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-10-25 10:24:21,445][INFO ][node                     ] [adam-node] started
+[2016-10-25 10:24:30,792][WARN ][transport.netty          ] [adam-node] exception caught on transport layer [[id: 0x79b160ba, /127.0.0.1:61696 => /127.0.0.1:9300]], closing connection
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-10-25 10:28:42,729][INFO ][bootstrap                ] running graceful exit on windows
+[2016-10-25 10:28:42,730][INFO ][node                     ] [adam-node] stopping ...
+[2016-10-25 10:28:42,763][INFO ][node                     ] [adam-node] stopped
+[2016-10-25 10:28:42,764][INFO ][node                     ] [adam-node] closing ...
+[2016-10-25 10:28:42,768][INFO ][node                     ] [adam-node] closed
+[2016-10-25 10:28:55,017][INFO ][node                     ] [adam-node] version[2.4.1], pid[6600], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-10-25 10:28:55,018][INFO ][node                     ] [adam-node] initializing ...
+[2016-10-25 10:28:55,499][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2016-10-25 10:28:55,521][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [120.3gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-10-25 10:28:55,522][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-10-25 10:28:57,450][INFO ][node                     ] [adam-node] initialized
+[2016-10-25 10:28:57,451][INFO ][node                     ] [adam-node] starting ...
+[2016-10-25 10:28:57,543][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-10-25 10:28:57,546][INFO ][discovery                ] [adam-node] enjoy-article/iKznCb9mSgiZ8q_YJM3D5A
+[2016-10-25 10:29:01,610][INFO ][cluster.service          ] [adam-node] new_master {adam-node}{iKznCb9mSgiZ8q_YJM3D5A}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-25 10:29:01,660][INFO ][http                     ] [adam-node] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2016-10-25 10:29:01,667][INFO ][node                     ] [adam-node] started
+[2016-10-25 10:29:01,715][INFO ][gateway                  ] [adam-node] recovered [0] indices into cluster_state
+[2016-10-25 10:29:11,351][WARN ][transport.netty          ] [adam-node] exception caught on transport layer [[id: 0x4f042121, /127.0.0.1:62204 => /127.0.0.1:9300]], closing connection
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-10-25 11:04:47,687][INFO ][bootstrap                ] running graceful exit on windows
+[2016-10-25 11:04:47,786][INFO ][node                     ] [adam-node] stopping ...
+[2016-10-25 11:04:48,206][INFO ][node                     ] [adam-node] stopped
+[2016-10-25 11:04:48,207][INFO ][node                     ] [adam-node] closing ...
+[2016-10-25 11:04:48,283][INFO ][node                     ] [adam-node] closed
+[2016-10-25 16:52:42,577][INFO ][node                     ] [adam-node] version[2.4.1], pid[8964], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-10-25 16:52:42,612][INFO ][node                     ] [adam-node] initializing ...
+[2016-10-25 16:52:46,086][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [head], sites [head]
+[2016-10-25 16:52:46,555][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [120.3gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-10-25 16:52:46,557][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-10-25 16:52:58,736][INFO ][node                     ] [adam-node] initialized
+[2016-10-25 16:52:58,738][INFO ][node                     ] [adam-node] starting ...
+[2016-10-25 16:52:59,307][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-10-25 16:52:59,328][INFO ][discovery                ] [adam-node] enjoy-article/1yO_RNH6Qt66M0WHBcpyHA
+[2016-10-25 16:53:03,417][INFO ][cluster.service          ] [adam-node] new_master {adam-node}{1yO_RNH6Qt66M0WHBcpyHA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-25 16:53:03,480][INFO ][http                     ] [adam-node] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2016-10-25 16:53:03,481][INFO ][node                     ] [adam-node] started
+[2016-10-25 16:53:03,581][INFO ][gateway                  ] [adam-node] recovered [0] indices into cluster_state
+[2016-10-25 16:53:14,517][WARN ][transport.netty          ] [adam-node] exception caught on transport layer [[id: 0xa5178b67, /127.0.0.1:49876 => /127.0.0.1:9300]], closing connection
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-10-25 17:03:31,132][INFO ][bootstrap                ] running graceful exit on windows
+[2016-10-25 17:03:31,133][INFO ][node                     ] [adam-node] stopping ...
+[2016-10-25 17:03:31,180][INFO ][node                     ] [adam-node] stopped
+[2016-10-25 17:03:31,180][INFO ][node                     ] [adam-node] closing ...
+[2016-10-25 17:03:31,184][INFO ][node                     ] [adam-node] closed

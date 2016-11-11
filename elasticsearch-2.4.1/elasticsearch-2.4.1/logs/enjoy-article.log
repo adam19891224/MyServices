@@ -1,0 +1,196 @@
+[2016-11-10 08:22:44,022][INFO ][node                     ] [adam-node] version[2.4.1], pid[6148], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-11-10 08:22:44,025][INFO ][node                     ] [adam-node] initializing ...
+[2016-11-10 08:22:44,965][ERROR][bootstrap                ] Exception
+java.lang.IllegalStateException: Could not load plugin descriptor for existing plugin [ik]. Was the plugin built before 2.0?
+	at org.elasticsearch.plugins.PluginsService.getPluginBundles(PluginsService.java:380)
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:128)
+	at org.elasticsearch.node.Node.<init>(Node.java:158)
+	at org.elasticsearch.node.Node.<init>(Node.java:140)
+	at org.elasticsearch.node.NodeBuilder.build(NodeBuilder.java:143)
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:194)
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:286)
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:35)
+Caused by: java.nio.file.NoSuchFileException: D:\elasticsearch-2.4.1\elasticsearch-2.4.1\plugins\ik\plugin-descriptor.properties
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:384)
+	at java.nio.file.Files.newInputStream(Files.java:152)
+	at org.elasticsearch.plugins.PluginInfo.readFromProperties(PluginInfo.java:87)
+	at org.elasticsearch.plugins.PluginsService.getPluginBundles(PluginsService.java:378)
+	... 7 more
+[2016-11-10 08:22:51,099][INFO ][node                     ] [adam-node] version[2.4.1], pid[7852], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-11-10 08:22:51,099][INFO ][node                     ] [adam-node] initializing ...
+[2016-11-10 08:22:51,460][ERROR][bootstrap                ] Exception
+java.lang.IllegalStateException: Could not load plugin descriptor for existing plugin [ik]. Was the plugin built before 2.0?
+	at org.elasticsearch.plugins.PluginsService.getPluginBundles(PluginsService.java:380)
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:128)
+	at org.elasticsearch.node.Node.<init>(Node.java:158)
+	at org.elasticsearch.node.Node.<init>(Node.java:140)
+	at org.elasticsearch.node.NodeBuilder.build(NodeBuilder.java:143)
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:194)
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:286)
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:35)
+Caused by: java.nio.file.NoSuchFileException: D:\elasticsearch-2.4.1\elasticsearch-2.4.1\plugins\ik\plugin-descriptor.properties
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:384)
+	at java.nio.file.Files.newInputStream(Files.java:152)
+	at org.elasticsearch.plugins.PluginInfo.readFromProperties(PluginInfo.java:87)
+	at org.elasticsearch.plugins.PluginsService.getPluginBundles(PluginsService.java:378)
+	... 7 more
+[2016-11-10 08:22:54,986][INFO ][node                     ] [adam-node] version[2.4.1], pid[4900], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-11-10 08:22:54,987][INFO ][node                     ] [adam-node] initializing ...
+[2016-11-10 08:22:55,356][ERROR][bootstrap                ] Exception
+java.lang.IllegalStateException: Could not load plugin descriptor for existing plugin [ik]. Was the plugin built before 2.0?
+	at org.elasticsearch.plugins.PluginsService.getPluginBundles(PluginsService.java:380)
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:128)
+	at org.elasticsearch.node.Node.<init>(Node.java:158)
+	at org.elasticsearch.node.Node.<init>(Node.java:140)
+	at org.elasticsearch.node.NodeBuilder.build(NodeBuilder.java:143)
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:194)
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:286)
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:35)
+Caused by: java.nio.file.NoSuchFileException: D:\elasticsearch-2.4.1\elasticsearch-2.4.1\plugins\ik\plugin-descriptor.properties
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:384)
+	at java.nio.file.Files.newInputStream(Files.java:152)
+	at org.elasticsearch.plugins.PluginInfo.readFromProperties(PluginInfo.java:87)
+	at org.elasticsearch.plugins.PluginsService.getPluginBundles(PluginsService.java:378)
+	... 7 more
+[2016-11-10 08:23:31,323][INFO ][node                     ] [adam-node] version[2.4.1], pid[4368], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-11-10 08:23:31,324][INFO ][node                     ] [adam-node] initializing ...
+[2016-11-10 08:23:31,677][ERROR][bootstrap                ] Exception
+java.lang.IllegalStateException: Could not load plugin descriptor for existing plugin [ik]. Was the plugin built before 2.0?
+	at org.elasticsearch.plugins.PluginsService.getPluginBundles(PluginsService.java:380)
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:128)
+	at org.elasticsearch.node.Node.<init>(Node.java:158)
+	at org.elasticsearch.node.Node.<init>(Node.java:140)
+	at org.elasticsearch.node.NodeBuilder.build(NodeBuilder.java:143)
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:194)
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:286)
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:35)
+Caused by: java.nio.file.NoSuchFileException: D:\elasticsearch-2.4.1\elasticsearch-2.4.1\plugins\ik\plugin-descriptor.properties
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:79)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:230)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:384)
+	at java.nio.file.Files.newInputStream(Files.java:152)
+	at org.elasticsearch.plugins.PluginInfo.readFromProperties(PluginInfo.java:87)
+	at org.elasticsearch.plugins.PluginsService.getPluginBundles(PluginsService.java:378)
+	... 7 more
+[2016-11-10 08:24:23,288][INFO ][node                     ] [adam-node] version[2.4.1], pid[680], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-11-10 08:24:23,288][INFO ][node                     ] [adam-node] initializing ...
+[2016-11-10 08:24:23,745][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [head, analysis-ik], sites [head]
+[2016-11-10 08:24:23,811][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [120.1gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-11-10 08:24:23,811][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-11-10 08:24:26,163][INFO ][ik-analyzer              ] try load config from D:\elasticsearch-2.4.1\elasticsearch-2.4.1\config\analysis-ik\IKAnalyzer.cfg.xml
+[2016-11-10 08:24:26,165][INFO ][ik-analyzer              ] try load config from D:\elasticsearch-2.4.1\elasticsearch-2.4.1\plugins\ik\config\IKAnalyzer.cfg.xml
+[2016-11-10 08:24:26,571][INFO ][ik-analyzer              ] [Dict Loading] custom\mydict.dic
+[2016-11-10 08:24:26,571][INFO ][ik-analyzer              ] [Dict Loading] custom\single_word_low_freq.dic
+[2016-11-10 08:24:26,576][INFO ][ik-analyzer              ] [Dict Loading] custom\ext_stopword.dic
+[2016-11-10 08:24:27,767][INFO ][node                     ] [adam-node] initialized
+[2016-11-10 08:24:27,768][INFO ][node                     ] [adam-node] starting ...
+[2016-11-10 08:24:27,929][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-11-10 08:24:27,951][INFO ][discovery                ] [adam-node] enjoy-article/wZxnltgrTwGKqjAag9CkDg
+[2016-11-10 08:24:32,009][INFO ][cluster.service          ] [adam-node] new_master {adam-node}{wZxnltgrTwGKqjAag9CkDg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-11-10 08:24:32,062][INFO ][http                     ] [adam-node] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2016-11-10 08:24:32,063][INFO ][node                     ] [adam-node] started
+[2016-11-10 08:24:32,256][INFO ][gateway                  ] [adam-node] recovered [1] indices into cluster_state
+[2016-11-10 08:24:33,356][INFO ][cluster.routing.allocation] [adam-node] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[test][2]] ...]).
+[2016-11-10 08:42:45,119][INFO ][bootstrap                ] running graceful exit on windows
+[2016-11-10 08:42:45,121][INFO ][node                     ] [adam-node] stopping ...
+[2016-11-10 08:42:45,217][INFO ][node                     ] [adam-node] stopped
+[2016-11-10 08:42:45,217][INFO ][node                     ] [adam-node] closing ...
+[2016-11-10 08:42:45,221][INFO ][node                     ] [adam-node] closed
+[2016-11-10 08:42:51,972][INFO ][node                     ] [adam-node] version[2.4.1], pid[7320], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-11-10 08:42:51,977][INFO ][node                     ] [adam-node] initializing ...
+[2016-11-10 08:42:52,418][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [head, analysis-ik], sites [head]
+[2016-11-10 08:42:52,443][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [120.1gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-11-10 08:42:52,443][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-11-10 08:42:53,597][INFO ][ik-analyzer              ] try load config from D:\elasticsearch-2.4.1\elasticsearch-2.4.1\config\analysis-ik\IKAnalyzer.cfg.xml
+[2016-11-10 08:42:53,598][INFO ][ik-analyzer              ] try load config from D:\elasticsearch-2.4.1\elasticsearch-2.4.1\plugins\ik\config\IKAnalyzer.cfg.xml
+[2016-11-10 08:42:53,961][INFO ][ik-analyzer              ] [Dict Loading] custom\mydict.dic
+[2016-11-10 08:42:53,962][INFO ][ik-analyzer              ] [Dict Loading] custom\single_word_low_freq.dic
+[2016-11-10 08:42:53,965][INFO ][ik-analyzer              ] [Dict Loading] custom\sougou.dic
+[2016-11-10 08:42:54,285][INFO ][ik-analyzer              ] [Dict Loading] main.dic
+[2016-11-10 08:42:54,396][INFO ][ik-analyzer              ] [Dict Loading] custom\ext_stopword.dic
+[2016-11-10 08:42:54,889][INFO ][node                     ] [adam-node] initialized
+[2016-11-10 08:42:54,890][INFO ][node                     ] [adam-node] starting ...
+[2016-11-10 08:42:55,000][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-11-10 08:42:55,004][INFO ][discovery                ] [adam-node] enjoy-article/o-L1b-6pTqiuakUf57TT2A
+[2016-11-10 08:42:59,105][INFO ][cluster.service          ] [adam-node] new_master {adam-node}{o-L1b-6pTqiuakUf57TT2A}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-11-10 08:42:59,141][INFO ][http                     ] [adam-node] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2016-11-10 08:42:59,141][INFO ][node                     ] [adam-node] started
+[2016-11-10 08:42:59,297][INFO ][gateway                  ] [adam-node] recovered [1] indices into cluster_state
+[2016-11-10 08:43:00,045][INFO ][cluster.routing.allocation] [adam-node] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[test][0]] ...]).
+[2016-11-10 08:45:44,551][INFO ][bootstrap                ] running graceful exit on windows
+[2016-11-10 08:45:44,552][INFO ][node                     ] [adam-node] stopping ...
+[2016-11-10 08:45:44,627][INFO ][node                     ] [adam-node] stopped
+[2016-11-10 08:45:44,627][INFO ][node                     ] [adam-node] closing ...
+[2016-11-10 08:45:44,630][INFO ][node                     ] [adam-node] closed
+[2016-11-10 08:46:14,034][INFO ][node                     ] [adam-node] version[2.4.1], pid[4504], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-11-10 08:46:14,034][INFO ][node                     ] [adam-node] initializing ...
+[2016-11-10 08:46:14,471][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [head, analysis-ik], sites [head]
+[2016-11-10 08:46:14,502][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [120.1gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-11-10 08:46:14,502][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-11-10 08:46:15,649][INFO ][ik-analyzer              ] try load config from D:\elasticsearch-2.4.1\elasticsearch-2.4.1\config\analysis-ik\IKAnalyzer.cfg.xml
+[2016-11-10 08:46:15,652][INFO ][ik-analyzer              ] try load config from D:\elasticsearch-2.4.1\elasticsearch-2.4.1\plugins\ik\config\IKAnalyzer.cfg.xml
+[2016-11-10 08:46:15,992][INFO ][ik-analyzer              ] [Dict Loading] custom\mydict.dic
+[2016-11-10 08:46:15,993][INFO ][ik-analyzer              ] [Dict Loading] custom\single_word_low_freq.dic
+[2016-11-10 08:46:15,996][INFO ][ik-analyzer              ] [Dict Loading] custom\sougou.dic
+[2016-11-10 08:46:16,282][INFO ][ik-analyzer              ] [Dict Loading] main.dic
+[2016-11-10 08:46:16,424][INFO ][ik-analyzer              ] [Dict Loading] custom\ext_stopword.dic
+[2016-11-10 08:46:16,939][INFO ][node                     ] [adam-node] initialized
+[2016-11-10 08:46:16,939][INFO ][node                     ] [adam-node] starting ...
+[2016-11-10 08:46:17,049][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-11-10 08:46:17,053][INFO ][discovery                ] [adam-node] enjoy-article/qlGG2vrqQqunHhv54ZQ1pA
+[2016-11-10 08:46:19,638][INFO ][bootstrap                ] running graceful exit on windows
+[2016-11-10 08:46:19,640][INFO ][node                     ] [adam-node] stopping ...
+[2016-11-10 08:46:19,659][INFO ][node                     ] [adam-node] stopped
+[2016-11-10 08:46:19,659][INFO ][node                     ] [adam-node] closing ...
+[2016-11-10 08:46:19,662][INFO ][node                     ] [adam-node] closed
+[2016-11-10 08:46:39,387][INFO ][node                     ] [adam-node] version[2.4.1], pid[5464], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-11-10 08:46:39,388][INFO ][node                     ] [adam-node] initializing ...
+[2016-11-10 08:46:39,864][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [head, analysis-ik], sites [head]
+[2016-11-10 08:46:39,892][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [120.1gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-11-10 08:46:39,893][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-11-10 08:46:41,019][INFO ][ik-analyzer              ] try load config from D:\elasticsearch-2.4.1\elasticsearch-2.4.1\config\analysis-ik\IKAnalyzer.cfg.xml
+[2016-11-10 08:46:41,021][INFO ][ik-analyzer              ] try load config from D:\elasticsearch-2.4.1\elasticsearch-2.4.1\plugins\ik\config\IKAnalyzer.cfg.xml
+[2016-11-10 08:46:41,369][INFO ][ik-analyzer              ] [Dict Loading] custom\mydict.dic
+[2016-11-10 08:46:41,370][INFO ][ik-analyzer              ] [Dict Loading] custom\single_word_low_freq.dic
+[2016-11-10 08:46:41,374][INFO ][ik-analyzer              ] [Dict Loading] custom\sougou.dic
+[2016-11-10 08:46:41,672][INFO ][ik-analyzer              ] [Dict Loading] main.dic
+[2016-11-10 08:46:41,804][INFO ][ik-analyzer              ] [Dict Loading] custom\ext_stopword.dic
+[2016-11-10 08:46:42,319][INFO ][node                     ] [adam-node] initialized
+[2016-11-10 08:46:42,320][INFO ][node                     ] [adam-node] starting ...
+[2016-11-10 08:46:42,423][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-11-10 08:46:42,426][INFO ][discovery                ] [adam-node] enjoy-article/FSkEHO2JRNeoDqyxgq2FtQ
+[2016-11-10 08:46:46,476][INFO ][cluster.service          ] [adam-node] new_master {adam-node}{FSkEHO2JRNeoDqyxgq2FtQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-11-10 08:46:46,540][INFO ][http                     ] [adam-node] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2016-11-10 08:46:46,544][INFO ][node                     ] [adam-node] started
+[2016-11-10 08:46:46,675][INFO ][gateway                  ] [adam-node] recovered [1] indices into cluster_state
+[2016-11-10 08:46:47,465][INFO ][cluster.routing.allocation] [adam-node] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[test][2]] ...]).
+[2016-11-10 08:54:31,993][INFO ][cluster.metadata         ] [adam-node] [test] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2016-11-10 08:54:32,666][INFO ][cluster.routing.allocation] [adam-node] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[test][4]] ...]).
+[2016-11-10 08:55:27,442][INFO ][cluster.metadata         ] [adam-node] [test] creating index, cause [api], templates [], shards [2]/[1], mappings []
+[2016-11-10 08:55:27,979][INFO ][cluster.routing.allocation] [adam-node] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[test][0]] ...]).
+[2016-11-10 09:01:59,525][INFO ][cluster.metadata         ] [adam-node] [test] create_mapping [member]
+[2016-11-10 14:53:00,563][WARN ][monitor.jvm              ] [adam-node] [gc][young][20306][11] duration [3.1s], collections [1]/[3.4s], total [3.1s]/[3.4s], memory [158.5mb]->[88.4mb]/[990.7mb], all_pools {[young] [68.3mb]->[678.4kb]/[266.2mb]}{[survivor] [6.9mb]->[1.1mb]/[33.2mb]}{[old] [83.3mb]->[86.5mb]/[691.2mb]}
+[2016-11-10 16:35:16,786][INFO ][bootstrap                ] running graceful exit on windows
+[2016-11-10 16:35:16,938][INFO ][node                     ] [adam-node] stopping ...

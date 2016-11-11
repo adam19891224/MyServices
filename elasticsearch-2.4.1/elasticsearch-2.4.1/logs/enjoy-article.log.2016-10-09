@@ -1,0 +1,101 @@
+[2016-10-09 09:30:04,155][INFO ][node                     ] [adam-node] version[2.4.1], pid[6148], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-10-09 09:30:04,155][INFO ][node                     ] [adam-node] initializing ...
+[2016-10-09 09:30:04,560][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-10-09 09:30:04,576][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [121.6gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-10-09 09:30:04,576][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-10-09 09:30:06,323][INFO ][node                     ] [adam-node] initialized
+[2016-10-09 09:30:06,323][INFO ][node                     ] [adam-node] starting ...
+[2016-10-09 09:30:06,572][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-10-09 09:30:06,588][INFO ][discovery                ] [adam-node] enjoy-article/IRDw5ohRRg-Sc2wPV0kIkw
+[2016-10-09 09:30:10,646][INFO ][cluster.service          ] [adam-node] new_master {adam-node}{IRDw5ohRRg-Sc2wPV0kIkw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-09 09:30:10,724][INFO ][gateway                  ] [adam-node] recovered [0] indices into cluster_state
+[2016-10-09 09:30:10,864][INFO ][http                     ] [adam-node] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-10-09 09:30:10,864][INFO ][node                     ] [adam-node] started
+[2016-10-09 09:30:42,758][INFO ][bootstrap                ] running graceful exit on windows
+[2016-10-09 09:30:42,758][INFO ][node                     ] [adam-node] stopping ...
+[2016-10-09 09:30:42,773][INFO ][node                     ] [adam-node] stopped
+[2016-10-09 09:30:42,773][INFO ][node                     ] [adam-node] closing ...
+[2016-10-09 09:30:42,789][INFO ][node                     ] [adam-node] closed
+[2016-10-09 09:36:10,589][INFO ][node                     ] [adam-node] version[2.4.1], pid[6568], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-10-09 09:36:10,589][INFO ][node                     ] [adam-node] initializing ...
+[2016-10-09 09:36:11,042][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [license, marvel-agent], sites []
+[2016-10-09 09:36:11,057][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [121.6gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-10-09 09:36:11,057][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-10-09 09:36:12,666][INFO ][node                     ] [adam-node] initialized
+[2016-10-09 09:36:12,666][INFO ][node                     ] [adam-node] starting ...
+[2016-10-09 09:36:12,962][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-10-09 09:36:12,978][INFO ][discovery                ] [adam-node] enjoy-article/ysISM7GYRVSOVObnUtp-mQ
+[2016-10-09 09:36:17,076][INFO ][cluster.service          ] [adam-node] new_master {adam-node}{ysISM7GYRVSOVObnUtp-mQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-09 09:36:17,200][INFO ][gateway                  ] [adam-node] recovered [0] indices into cluster_state
+[2016-10-09 09:36:17,497][INFO ][http                     ] [adam-node] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-10-09 09:36:17,497][INFO ][node                     ] [adam-node] started
+[2016-10-09 09:36:17,794][INFO ][license.plugin.core      ] [adam-node] license [acb4f04a-3a65-47ee-87f8-668670f9ed80] - valid
+[2016-10-09 09:36:17,797][ERROR][license.plugin.core      ] [adam-node] 
+#
+# License will expire on [Tuesday, November 08, 2016]. If you have a new license, please update it.
+# Otherwise, please reach out to your support contact.
+# 
+# Commercial plugins operate with reduced functionality on license expiration:
+# - marvel
+#  - The agent will stop collecting cluster and indices metrics
+#  - The agent will stop automatically cleaning indices older than [marvel.history.duration]
+[2016-10-09 09:36:22,843][INFO ][cluster.metadata         ] [adam-node] [.marvel-es-data-1] creating index, cause [auto(bulk api)], templates [.marvel-es-data-1], shards [1]/[1], mappings [node, cluster_info]
+[2016-10-09 09:36:23,099][INFO ][cluster.metadata         ] [adam-node] [.marvel-es-1-2016.10.09] creating index, cause [auto(bulk api)], templates [.marvel-es-1], shards [1]/[1], mappings [_default_, shards, node, index_stats, index_recovery, cluster_state, cluster_stats, indices_stats, node_stats]
+[2016-10-09 09:36:23,399][INFO ][cluster.routing.allocation] [adam-node] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.marvel-es-1-2016.10.09][0], [.marvel-es-1-2016.10.09][0]] ...]).
+[2016-10-09 09:36:23,469][INFO ][cluster.metadata         ] [adam-node] [.marvel-es-1-2016.10.09] update_mapping [node_stats]
+[2016-10-09 09:36:23,598][INFO ][cluster.metadata         ] [adam-node] [.marvel-es-1-2016.10.09] update_mapping [cluster_stats]
+[2016-10-09 09:36:34,007][INFO ][cluster.metadata         ] [adam-node] [.marvel-es-1-2016.10.09] update_mapping [indices_stats]
+[2016-10-09 09:36:34,142][INFO ][cluster.metadata         ] [adam-node] [.marvel-es-1-2016.10.09] update_mapping [cluster_stats]
+[2016-10-09 09:37:46,372][INFO ][node                     ] [adam-node] stopping ...
+[2016-10-09 09:37:46,768][INFO ][node                     ] [adam-node] stopped
+[2016-10-09 09:37:46,769][INFO ][node                     ] [adam-node] closing ...
+[2016-10-09 09:37:46,774][INFO ][node                     ] [adam-node] closed
+[2016-10-09 09:38:23,770][INFO ][node                     ] [adam-node] version[2.4.1], pid[6828], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-10-09 09:38:23,771][INFO ][node                     ] [adam-node] initializing ...
+[2016-10-09 09:38:24,173][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2016-10-09 09:38:24,188][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [121.6gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-10-09 09:38:24,188][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-10-09 09:38:25,921][INFO ][node                     ] [adam-node] initialized
+[2016-10-09 09:38:25,922][INFO ][node                     ] [adam-node] starting ...
+[2016-10-09 09:38:26,167][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-10-09 09:38:26,170][INFO ][discovery                ] [adam-node] enjoy-article/axSHGbbETnGB-Ym2W63C7A
+[2016-10-09 09:38:30,235][INFO ][cluster.service          ] [adam-node] new_master {adam-node}{axSHGbbETnGB-Ym2W63C7A}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-09 09:38:30,426][INFO ][gateway                  ] [adam-node] recovered [2] indices into cluster_state
+[2016-10-09 09:38:30,509][INFO ][http                     ] [adam-node] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-10-09 09:38:30,511][INFO ][node                     ] [adam-node] started
+[2016-10-09 09:38:31,000][INFO ][cluster.routing.allocation] [adam-node] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.marvel-es-1-2016.10.09][0], [.marvel-es-1-2016.10.09][0]] ...]).
+[2016-10-09 09:38:57,055][INFO ][node                     ] [adam-node] stopping ...
+[2016-10-09 09:38:57,114][INFO ][node                     ] [adam-node] stopped
+[2016-10-09 09:38:57,115][INFO ][node                     ] [adam-node] closing ...
+[2016-10-09 09:38:57,118][INFO ][node                     ] [adam-node] closed
+[2016-10-09 13:51:28,276][INFO ][node                     ] [adam-node] version[2.4.1], pid[4292], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-10-09 13:51:28,277][INFO ][node                     ] [adam-node] initializing ...
+[2016-10-09 13:51:28,720][INFO ][plugins                  ] [adam-node] modules [reindex, lang-expression, lang-groovy], plugins [license, marvel-agent], sites []
+[2016-10-09 13:51:28,739][INFO ][env                      ] [adam-node] using [1] data paths, mounts [[(D:)]], net usable_space [121.5gb], net total_space [129gb], spins? [unknown], types [NTFS]
+[2016-10-09 13:51:28,739][INFO ][env                      ] [adam-node] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-10-09 13:51:30,429][INFO ][node                     ] [adam-node] initialized
+[2016-10-09 13:51:30,429][INFO ][node                     ] [adam-node] starting ...
+[2016-10-09 13:51:30,711][INFO ][transport                ] [adam-node] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-10-09 13:51:30,714][INFO ][discovery                ] [adam-node] enjoy-article/tnQ5eI4KSs6UUumYAZ2kag
+[2016-10-09 13:51:34,768][INFO ][cluster.service          ] [adam-node] new_master {adam-node}{tnQ5eI4KSs6UUumYAZ2kag}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-09 13:51:34,979][INFO ][gateway                  ] [adam-node] recovered [2] indices into cluster_state
+[2016-10-09 13:51:35,056][INFO ][http                     ] [adam-node] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-10-09 13:51:35,058][INFO ][node                     ] [adam-node] started
+[2016-10-09 13:51:35,529][INFO ][license.plugin.core      ] [adam-node] license [a9ea907c-5fd1-4a62-8fcd-92ccb710b33a] - valid
+[2016-10-09 13:51:35,533][ERROR][license.plugin.core      ] [adam-node] 
+#
+# License will expire on [Tuesday, November 08, 2016]. If you have a new license, please update it.
+# Otherwise, please reach out to your support contact.
+# 
+# Commercial plugins operate with reduced functionality on license expiration:
+# - marvel
+#  - The agent will stop collecting cluster and indices metrics
+#  - The agent will stop automatically cleaning indices older than [marvel.history.duration]
+[2016-10-09 13:51:35,979][INFO ][cluster.routing.allocation] [adam-node] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.marvel-es-1-2016.10.09][0], [.marvel-es-1-2016.10.09][0]] ...]).
+[2016-10-09 14:00:26,753][INFO ][cluster.metadata         ] [adam-node] [.kibana] creating index, cause [api], templates [], shards [1]/[1], mappings [config]
+[2016-10-09 14:00:26,957][INFO ][cluster.routing.allocation] [adam-node] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.kibana][0]] ...]).
+[2016-10-09 17:20:06,291][INFO ][bootstrap                ] running graceful exit on windows
+[2016-10-09 17:20:06,292][INFO ][node                     ] [adam-node] stopping ...
+[2016-10-09 17:20:06,771][INFO ][node                     ] [adam-node] stopped
+[2016-10-09 17:20:06,773][INFO ][node                     ] [adam-node] closing ...
+[2016-10-09 17:20:06,787][INFO ][node                     ] [adam-node] closed
