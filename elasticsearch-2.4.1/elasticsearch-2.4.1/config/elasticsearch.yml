@@ -20,7 +20,7 @@ cluster.name: enjoy-article
 #
 # Use a descriptive name for the node:
 #
-node.name: adam-node
+node.name: enjoy-node
 #
 # Add custom attributes to the node:
 #
